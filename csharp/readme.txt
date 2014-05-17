@@ -1,1 +1,1 @@
-csharp code samples directory
+c# code samples directory

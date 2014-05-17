@@ -1,0 +1,58 @@
+﻿<Window x:Class="WebApiOnlineWPF.View.CustomerView.EditCustomer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Edit Customer" Height="300" Width="500" WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+        <Style TargetType="Window">
+            <Setter Property="FontFamily" Value="Calibri"/>
+            <Setter Property="FontSize" Value="20"/>
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="Background" Value="Silver"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Background" Value="Gray"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Column="0" Grid.Row="0" Text="First Name:"></TextBlock>
+        <TextBox x:Name="textBoxFirstName" Grid.Column="1" Grid.Row="0" TextChanged="textBoxTextChanged"></TextBox>
+        <TextBlock Grid.Column="0" Grid.Row="1" Text="Last Name:"></TextBlock>
+        <TextBox x:Name="textBoxLastName" Grid.Column="1" Grid.Row="1" TextChanged="textBoxTextChanged"></TextBox>
+        <TextBlock Grid.Column="0" Grid.Row="2" Text="Email:"></TextBlock>
+        <TextBox x:Name="textBoxEmail" Grid.Column="1" Grid.Row="2" TextChanged="textBoxTextChanged"></TextBox>
+        <TextBlock Grid.Column="0" Grid.Row="3" Text="Phone:"></TextBlock>
+        <TextBox x:Name="textBoxPhone" Grid.Column="1" Grid.Row="3" TextChanged="textBoxTextChanged"></TextBox>
+        <TextBlock Grid.Column="0" Grid.Row="4" Text="Credit Card:"></TextBlock>
+        <TextBox x:Name="textBoxCreditCard" Grid.Column="1" Grid.Row="4" TextChanged="textBoxTextChanged"></TextBox>
+        <Grid Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="1.6*"></ColumnDefinition>
+                <ColumnDefinition Width=".4*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Text="Address(-es):"/>
+            <ComboBox x:Name="comboBoxAddresses" Grid.Column="1" SelectedIndex="0" />
+            <Button x:Name="buttonEditAddress" Grid.Column="2" Content="Edit" Click="buttonClick"/>
+        </Grid>
+        <Button x:Name="buttonApply" Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2" Content="Apply" Click="buttonClick"></Button>
+
+    </Grid>
+</Window>

@@ -1,0 +1,15 @@
+﻿<Window x:Class="WebApiOnlineWPF.View.ProductView.EditProduct"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Edit Product" Height="80" Width="300" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Column="0" Margin="8" Text="Name:" FontWeight="Bold" FontSize="16"></TextBlock>
+        <TextBox x:Name="textBoxInput" Grid.Column="1" Margin="10" TextChanged="textBoxInputTextChanged"></TextBox>
+        <Button x:Name="buttonApply" Grid.Column="2" FontWeight="Bold" Content="Apply" Click="buttonApplyClick"></Button>
+    </Grid>
+</Window>

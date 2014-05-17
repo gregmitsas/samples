@@ -1,1 +1,1 @@
-cpp code samples directory
+c++ code samples directory

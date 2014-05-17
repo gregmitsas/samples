@@ -1,0 +1,10 @@
+=============COMPILE & RUN=============
+
+> cd .../javaProjectDirectory/src (default package)
+> javac *.java
+> rmic ATMImpl
+> rmiregistry &
+> java -classpath .;mysql-connector-java-5.1.15-bin.jar -Djava.security.manager -Djava.security.policy=policy ATMServer &
+> java -Djava.security.manager -Djava.security.policy=policy ATMClient
+
+========================================

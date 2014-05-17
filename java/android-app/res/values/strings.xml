@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Διαχείριση Τραπεζικών Λογαριασμών</string> <!-- AndroidManifest.xml -->
+    <string name="accountsprompt">Διάλεξε Λογαριασμό</string> <!-- add_transaction.xml -->
+    
+    <!-- listaccounts.xml -->
+    <string name="introMessage">Πατήστε σε ένα λογαριασμό για περισσότερες πληροφορίες!</string>
+    <string name="addAccount">Προσθήκη Λογαριασμού</string>
+    <string name="addTransaction">Προσθήκη Συναλλαγής</string>
+    <string name="recentTransactions">Πρόσφατες Συναλλαγές</string>
+    <!-- listaccounts.xml -->
+    
+    <!-- update_account.xml -->
+    <string name="update">Ανανέωση</string>
+    <string name="delete">Διαγραφή</string>
+    <string name="transactions">Συναλλαγές</string>
+    <string name="accountNumber">Αριθμός Λογαριασμού</string>
+    <string name="customerNumber">Αριθμός Πελάτη</string>
+    <string name="accountHolders">Κάτοχοι Λογαριασμού</string>
+    <string name="bankName">Επωνυμία Τράπεζας</string>
+    <string name="branchName">Επωνυμία Υποκαταστήματος</string>
+    <string name="branchAddress">Διεύθυνση Υποκαταστήματος</string>
+    <string name="iban">Αριθμός IBAN</string>
+    <string name="bic">Αριθμός BIC</string>
+    <string name="currentBalance">Τρέχον Υπόλοιπο</string>
+    <string name="remarks">Παρατηρήσεις</string>
+    <!-- update_account.xml -->
+    
+    <!-- transaction.xml -->
+    <string name="accNum">Αρ. Λογαριασμού</string>
+    <string name="rem">Παρατ.</string>
+    <string name="transactionDate">Ημερομηνία Συναλλαγής</string>
+    <string name="tranDate">Ημ. Συναλ.</string>
+    <string name="transactionDetails">Λεπτομέρειες Συναλλαγής</string>
+    <string name="tranDetails">Λεπτ. Συναλ.</string>
+    <string name="transactionType">Τύπος Συναλλαγής</string>
+    <string name="tranType">Τυπ. Συναλ.</string>
+    <string name="transactionAmount">Ποσό Συναλλαγής</string>
+    <string name="tranAmount">Ποσό Συναλ.</string>
+    <string name="balance">Υπόλοιπο</string>
+    <string name="errorTransactions">Λυπούμαστε, δεν βρέθηκαν συναλλαγές!</string>
+    <!-- transaction.xml -->
+    
+    <!-- transaction_details.xml -->
+    <string name="chequeDetails">Λεπτομέρειες Απόδειξης</string>
+    <string name="chequeParty">Κατηγορία Απόδειξης</string>
+    <string name="chequeNumber">Αριθμός Απόδειξης</string>
+    <string name="amount">Ποσό</string>
+    <string name="accountDetails">Λεπτομέρειες Λογαριασμού</string>
+    <!-- transaction_details.xml -->
+    
+    <!-- search_transactions.xml -->
+    <string name="clear">Καθαρισμός</string>
+    <string name="search">Αναζήτηση</string>
+    <string name="toAmount">Όριο Ποσού</string>
+    <string name="fromAmount">Εκκίνηση Ποσού</string>
+    <string name="toDate">Έως</string>
+    <string name="fromDate">Από</string>
+    <!-- search_transactions.xml -->
+    
+    <!-- list_account_transactions.xml -->
+    <string name="type">Τύπος</string>
+    <string name="details">Λεπτομέρειες</string>
+    <string name="date">Ημερομηνία</string>
+    <!-- list_account_transactions.xml -->
+    
+    <!-- add_transaction.xml -->
+    <string name="withdraw">Ανάληψη</string>
+    <string name="deposit">Κατάθεση</string>
+    <string name="account">Λογαριασμός</string>
+    <!-- add_transaction.xml -->
+    
+
+</resources>
