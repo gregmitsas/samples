@@ -1,0 +1,68 @@
+<ul id="dynamicList"></ul>
+		
+		<script type="text/javascript">
+
+			function Area(id, code, description, type, parent){
+				this.id = id;
+				this.code = code;
+				this.description = description;
+				this.type = type;
+				this.parent = parent;
+				this.alertData = function(){
+					alert(this.id + ' - ' + this.code + ' - ' + this.description + ' - ' + this.type + ' - ' + this.parent);
+				}
+			}
+
+			$(document).ready(function()
+				{
+			    	var jsonData = [];
+			    	var areasWithParent = [];
+			    	var areasWithoutParent = [];
+			    	
+			    	$.getJSON('http://localhost:8080/SpringMVC/areas/js.json', {
+				    	ajax : 'true'}, function(data){
+
+				    	    jsonData = data;
+
+				    	    for(var i=0; i<jsonData.length; i++){
+					    	    var id = jsonData[i][0];
+					    	    var code = jsonData[i][1];
+					    	    var description = jsonData[i][2];
+					    	    var type = jsonData[i][3];
+					    	    var parent = jsonData[i][4];
+					    	    if(parent === null){
+						    	    areasWithoutParent.push(new Area(id, code, description, type, parent));
+						    	}else{
+							    	areasWithParent.push(new Area(id, code, description, type, parent));
+						    	}						    	
+					    	}
+
+					    	var parentHtml = '';
+					    	for(var i=0; i<areasWithoutParent.length; i++){
+						    	parentHtml += '<li>' + areasWithoutParent[i].description + '<ul id=' + areasWithoutParent[i].id + '></ul></li>';
+						    }
+						    $('#dynamicList').html(parentHtml);
+
+						    var childHtml = '';						    
+						    for(var i=0; i<areasWithParent.length; i++){
+							    var area = areasWithParent[i];
+							    childHtml += '<li>' + area.description + '</li>';							    
+							    var parentId = '#' + area.parent;							    
+							    $(parentId).append(childHtml);							    
+							    childHtml = '';							    
+						    }
+				    	    
+						});
+				});
+			
+		</script>
+
+
+http://blog.wax-o.com/2014/01/how-to-find-deep-and-get-parent-in-javascript-nested-objects-with-recursive-functions-and-the-reference-concept-level-beginner/
+
+http://rvieiraweb.wordpress.com/2013/01/21/jquery-building-list-with-json-object/
+
+http://www.experts-exchange.com/Programming/Languages/Scripting/JavaScript/Q_27524776.html
+
+http://www.devign.me/tree-rendering-in-client-side-no-recursion
+
