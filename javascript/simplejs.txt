@@ -54,8 +54,47 @@
 				    	    
 						});
 				});
+				
+				var data2 = {
+						    'name' : 'Folder 1',
+						    'type' : 'folder',
+						    'additionalParameters' : {
+							    'children' : {
+								    'item1' : { 'name' : 'Item 1', 'type' : 'item'}
+								}
+							}
+						}
+						data2['additionalParameters']['children']['item2'] = { 'name' : 'Item 2', 'type' : 'item' };
+						data2['additionalParameters']['children']['item3'] = { 'name' : 'Folder 1.1', 'type' : 'folder', 'additionalParameters' : {
+							    'children' : {
+									'item4' : { 'name' : 'Item 4', 'type' : 'item'},
+									'item5' : { 'name' : 'Item 5', 'type' : 'item'}
+								} 
+							}};
+							
+						data2['additionalParameters']['children']['item3']['additionalParameters']['children']['item6'] = { 'name' : 'Item 6', 'type' : 'item' }
 			
 		</script>
+
+
+{
+	"name":"Folder 1",
+	"type":"folder",
+	"additionalParameters":{
+		"children":{
+			"item1":{"name":"Item 1","type":"item"},
+			"item2":{"name":"Item 2","type":"item"},
+			"item3":{"name":"Folder 1.1","type":"folder","additionalParameters":{
+				"children":{
+					"item4":{"name":"Item 4","type":"item"},
+					"item5":{"name":"Item 5","type":"item"},
+					"item6":{"name":"Item 6","type":"item"}
+					}
+				}
+			}
+		}
+	}
+}
 
 
 http://blog.wax-o.com/2014/01/how-to-find-deep-and-get-parent-in-javascript-nested-objects-with-recursive-functions-and-the-reference-concept-level-beginner/
